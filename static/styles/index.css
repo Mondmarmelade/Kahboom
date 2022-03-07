@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
+
+body {
+  background-color: #46178f;
+}
+
+.titleContainer {
+  text-align: center;
+  color: #ffffff;
+  font-size: 25px;
+  font-family: "Fredoka", sans-serif;
+}
+
+.ButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.btn {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 25px;
+  font-family: "Fredoka", sans-serif;
+}
+
+.red {
+  background-color: #e21b3c;
+}
+
+.green {
+  background-color: #26890c;
+}
