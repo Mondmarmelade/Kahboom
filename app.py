@@ -57,6 +57,34 @@ def quizIDURL(ID):
     # # print(q, file=sys.stderr)
     # return jsonify(q["choices"])
 
+@app.route('/quizName/<Name>')
+def quizName(Name):
+    try:
+        response = ur.urlopen("https://kahoot.it/rest/kahoots/?query=" + Name + "&limit=10")
+        q = json.loads(response.read())["entities"]
+
+        selects = []
+
+        for selects in q:
+            for i in range(len(selects.get("card"))):
+
+                print(selects["card"][i]["title"])
+                newSelect = {
+                    "name": selects["card"][i]["title"],
+                    "id": selects["card"][i]["uuid"],
+                    "creator": selects["card"][i]["creator_username"]
+                }
+
+                selects.append(newSelect)
+
+
+        return render_template("select.html", selects=selects)
+        # return selects
+
+    except urllib.error.HTTPError as exception:
+        print("\nCheck if the Quiz-Name has correct synatx or try again later")
+    # # print(q, file=sys.stderr)
+    # return jsonify(q["choices"])
 
 if __name__ == "__main__":
     app.run(debug=True)
