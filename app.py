@@ -67,7 +67,6 @@ def quizName(Name):
 
         for select in q:
 
-            print(select["card"])
             newSelect = {
                 "name": select["card"]["title"],
                 "id": select["card"]["uuid"],
