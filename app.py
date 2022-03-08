@@ -9,8 +9,16 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route('/search')
+def search():
+    return render_template("search.html")
+
+@app.route('/quizID')
+def quizID():
+    return render_template("quizID.html")
+
 @app.route('/quizID/<ID>')
-def quizID(ID):
+def quizIDURL(ID):
     try:
         response = ur.urlopen("https://play.kahoot.it/rest/kahoots/" + ID)
         q = json.loads(response.read())["questions"]
