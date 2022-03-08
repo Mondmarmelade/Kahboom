@@ -65,17 +65,16 @@ def quizName(Name):
 
         selects = []
 
-        for selects in q:
-            for i in range(len(selects.get("card"))):
+        for select in q:
 
-                print(selects["card"][i]["title"])
-                newSelect = {
-                    "name": selects["card"][i]["title"],
-                    "id": selects["card"][i]["uuid"],
-                    "creator": selects["card"][i]["creator_username"]
-                }
+            print(select["card"])
+            newSelect = {
+                "name": select["card"]["title"],
+                "id": select["card"]["uuid"],
+                "creator": select["card"]["creator_username"]
+            }
 
-                selects.append(newSelect)
+            selects.append(newSelect)
 
 
         return render_template("select.html", selects=selects)
