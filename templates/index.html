@@ -13,8 +13,8 @@
             <p>Choose an option to continue</p>
         </div>
         <div class="ButtonContainer">
-            <button id="searchBtn" class="btn red">Answers by searching Quiz</button>    
-            <button id="answersBtn" class="btn green">Answers with QuizID</button>    
+            <a class="btn red" href="{{ url_for('search') }}">Answers by searching Quiz</a>
+            <a class="btn green" href="{{ url_for('quizID') }}">Answers with QuizID</a>
         </div>
 </body>
 </html>
