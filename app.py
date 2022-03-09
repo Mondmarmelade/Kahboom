@@ -2,6 +2,7 @@
 import json
 import urllib.request as ur, json
 import urllib
+from waitress import serve
 from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
@@ -73,4 +74,4 @@ def quizName(Name):
 
 if __name__ == "__main__":
     #This runs the flask process
-    app.run(host='0.0.0.0', port=80)
+    serve(app, host='0.0.0.0', port=80, url_scheme='https')
