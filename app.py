@@ -11,16 +11,6 @@ def index():
     #Returns index.html
     return render_template("index.html")
 
-@app.route('/search')
-def search():
-    #Returns search.html
-    return render_template("search.html")
-
-@app.route('/quizID')
-def quizID():
-    #Returns quizID.html
-    return render_template("quizID.html")
-
 @app.route('/quizID/<ID>')
 def quizIDURL(ID):
     try:
