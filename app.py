@@ -74,4 +74,4 @@ def quizName(Name):
 
 if __name__ == "__main__":
     #This runs the flask process
-    serve(app, host='0.0.0.0', port=80, url_scheme='https')
+    serve(app, host='0.0.0.0', port=5000, url_scheme='https')
