@@ -28,6 +28,6 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
+Modules used:
 * [Flask](https://palletsprojects.com/p/flask/)
 * [UrlLib](https://urllib3.readthedocs.io/en/stable/)
