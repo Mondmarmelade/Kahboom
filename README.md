@@ -5,7 +5,7 @@ from StandartCoder and Mondmarmelade! Programmed with Python, HTML, CSS and JS!
 
 ## Getting Started
 
-Just go to http://kahboom.tk/, and select what method you wanna use!
+Just go to https://kahboom.tk/, and select what method you wanna use!
 Methods:
  - Awnsers with QuizName
  - Awnsers with QuizID
