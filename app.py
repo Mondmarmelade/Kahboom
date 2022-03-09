@@ -1,3 +1,4 @@
+#Here we import all resources
 import json
 import urllib.request as ur, json
 import urllib
@@ -7,14 +8,17 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    #Returns index.html
     return render_template("index.html")
 
 @app.route('/search')
 def search():
+    #Returns search.html
     return render_template("search.html")
 
 @app.route('/quizID')
 def quizID():
+    #Returns quizID.html
     return render_template("quizID.html")
 
 @app.route('/quizID/<ID>')
@@ -33,14 +37,9 @@ def quizIDURL(ID):
                 for i in range(len(answer.get("choices"))):
                     if answer["choices"][i]["correct"] == True:
 
-                        if i == 0:
-                            Color = "Red"
-                        elif i == 1:
-                            Color = "Blue"
-                        elif i == 2:
-                            Color = "Yellow"
-                        elif i == 3:
-                            Color = "Green"
+                        colors = ["Red", "Blue", "Yellow", "Green"]
+
+                        Color = colors[i]
 
                         newAnswer = {
                             "number": number,
@@ -50,12 +49,11 @@ def quizIDURL(ID):
                         answers.append(newAnswer)
 
         return render_template("answers.html", answers=answers)
-        # return answers
+        #Returns awnsers.html
 
     except urllib.error.HTTPError as exception:
-        print("\nCheck if the Quiz-ID is correct or try again later")
-    # # print(q, file=sys.stderr)
-    # return jsonify(q["choices"])
+        #This returns an error if there is an HTTPError
+        return "Check if the Quiz-ID is correct or try again later"
 
 @app.route('/quizName/<Name>')
 def quizName(Name):
@@ -77,12 +75,12 @@ def quizName(Name):
 
 
         return render_template("select.html", selects=selects)
-        # return selects
+        #Returns select.html
 
     except urllib.error.HTTPError as exception:
-        print("\nCheck if the Quiz-Name has correct synatx or try again later")
-    # # print(q, file=sys.stderr)
-    # return jsonify(q["choices"])
+        #This returns an error if there is an HTTPError
+        return "Check if the Quiz-Name has correct synatx or try again later"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    #This runs the flask process
+    app.run(host='0.0.0.0', port=80)
