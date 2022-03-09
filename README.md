@@ -22,11 +22,9 @@ Any advise for common problems or issues, or join our discord: [Invite Me](https
 
 Contributors names and contact info
 
-* Mondmarmelade
-* [@Mondmarmelade](https://github.com/Mondmarmelade)
+* Mondmarmelade | [@Mondmarmelade](https://github.com/Mondmarmelade)
 
-* StandartCoder
-* [@StandartCoder](https://github.com/StandartCoder)
+* StandartCoder | [@StandartCoder](https://github.com/StandartCoder)
 
 ## License
 
