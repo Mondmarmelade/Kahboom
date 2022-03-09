@@ -19,14 +19,76 @@ body {
 
 .select {
   display: flex;
-  /* justify-content: space-evenly; */
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: auto;
+  min-width: 80%;
   margin: 10px;
   padding-inline: 20px;
   background-color: #ebecf0;
   border-radius: 20px;
   font-size: 25px;
   font-family: "Fredoka", sans-serif;
+}
+
+.select p {
+  margin-inline: 10px;
+}
+
+.QuizIDContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+pre {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #c2a5df;
+  border-radius: 10px;
+  transition: width 1.5s ease-in-out;
+  cursor: pointer;
+}
+
+pre:hover {
+  width: 500px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 25px;
+  font-family: "Fredoka", sans-serif;
+}
+
+.red {
+  background-color: #ff3355;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff3355;
+  border: 0px;
 }

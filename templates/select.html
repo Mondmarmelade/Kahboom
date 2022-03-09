@@ -18,9 +18,13 @@
         {% block content %}
             {% for s in selects %}
             <div class="select">
-                <p>QuizID: {{s.id}}</p>
+                <div class="QuizIDContainer">
+                    <p>QuizID:</p>
+                    <pre>{{s.id}}</pre>
+                </div>
                 <p>QuizName: {{s.name}}</p>
                 <p>Creator: {{s.creator}}</p>
+                <a class="btn red" href="">Select</a>
             </div>
             {% endfor %}
         {% endblock %}
