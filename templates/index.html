@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/styles/index.css">
+    <link rel="stylesheet" href="../static/styles/modal.css">
+    <script src="../static/javascript/modal.js" defer></script>
     <title>Kahboom!</title>
 </head>
 <body>
@@ -12,9 +14,28 @@
             <p>Kahboom!</p>
             <p>Choose an option to continue</p>
         </div>
+
         <div class="ButtonContainer">
-            <a class="btn red" href="{{ url_for('search') }}">Answers by searching Quiz</a>
-            <a class="btn green" href="{{ url_for('quizID') }}">Answers with QuizID</a>
+            <button id="searchNameBtn" class="btn red">Answers by searching Quiz</button>
+            <button id="searchIDBtn" class="btn green">Answers with QuizID</button>
+        </div>
+
+        <div id="searchNameModal" class="modal">
+            <div class="modal-content">
+                <form class="form">
+                    <input name="quizID" placeholder="Quiz Name" id="quizID-input" class="InputQuizID">
+                    <button type="submit" class="BtnQuizID">BOOM!</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="searchIDModal" class="modal">
+            <div class="modal-content">
+                <form class="form">
+                    <input name="quizID" placeholder="Quiz-ID" id="quizID-input" class="InputQuizID">
+                    <button type="submit" class="BtnQuizID">BOOM!</button>
+                </form>
+            </div>
         </div>
 </body>
 </html>
