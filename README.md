@@ -14,7 +14,6 @@ Methods:
  - Awnsers with QuizName
  - Awnsers with QuizID
 
-
 ## Help
 
 Any advise for common problems or issues, or join our discord: [Invite Me](https://dsc.gg/kahboom)
@@ -28,13 +27,6 @@ Contributors names and contact info
 
 * StandartCoder
 * [@StandartCoder](https://github.com/StandartCoder)
-
-## Version History
-
-* 0.2
-    * Fixed some bugs
-* 0.1
-    * Initial Release
 
 ## License
 
