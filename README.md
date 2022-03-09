@@ -1,9 +1,5 @@
 # Kahboom!
 
-This is a simple-to-use tool to cheat in Kahoot!
-
-## Description
-
 This is a simple-to-use tool to cheat in Kahoot which is am open-source project
 from StandartCoder and Mondmarmelade! Programmed with Python, HTML, CSS and JS!
 
