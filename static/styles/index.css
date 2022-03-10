@@ -42,3 +42,9 @@ body {
 .green {
   background-color: #26890c;
 }
+
+@media screen and (max-width: 600px) {
+  .ButtonContainer {
+    flex-direction: column;
+  }
+}

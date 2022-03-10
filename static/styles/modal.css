@@ -73,3 +73,9 @@
   font-size: 25px;
   font-family: "Fredoka", sans-serif;
 }
+
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 70%;
+  }
+}
