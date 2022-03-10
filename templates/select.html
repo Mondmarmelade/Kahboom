@@ -6,9 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../static/others/favicon.ico">
     <link rel="stylesheet" href="../static/styles/select.css">
+
+    <meta property="og:type" content="site">
+    <meta property="og:title" content="Kahboom!">
+    <meta property="og:description" content="Enjoy the free and simple-to-use Kahoot cheat called Kahboom! Just click on the link and begin now to cheat in Kahoot!">
+    <meta property="og:url" content="https://kahboom.tk">
+    <meta property="og:image" content="../static/others/favicon.ico">
+
     <title>Kahboom!</title>
+    <script>
+        function start() {
+            const btns = document.querySelectorAll('.btn');
+            for (const btn of btns) {
+                btn.addEventListener('click', function() {
+                    window.location.replace("http://192.168.2.147:5000/quizID/" + btn.name);
+                });
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="start();">
 
     <div class="titleContainer">
         <p>Kahboom!</p>
@@ -25,7 +42,7 @@
                 </div>
                 <p>QuizName: {{s.name}}</p>
                 <p>Creator: {{s.creator}}</p>
-                <a class="btn red" href="">Select</a>
+                <button name="{{s.id}}" type="button" class="btn">Select</button>
             </div>
             {% endfor %}
         {% endblock %}

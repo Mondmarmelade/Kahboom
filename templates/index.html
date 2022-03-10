@@ -7,34 +7,57 @@
     <link rel="icon" type="image/x-icon" href="../static/others/favicon.ico">
     <link rel="stylesheet" href="../static/styles/index.css">
     <link rel="stylesheet" href="../static/styles/modal.css">
+
+    <meta property="og:type" content="site">
+    <meta property="og:title" content="Kahboom!">
+    <meta property="og:description" content="Enjoy the free and simple-to-use Kahoot cheat called Kahboom! Just click on the link and begin now to cheat in Kahoot!">
+    <meta property="og:url" content="https://kahboom.tk">
+    <meta property="og:image" content="../static/others/favicon.ico">
+
     <script src="../static/javascript/modal.js" defer></script>
     <title>Kahboom!</title>
+    <script>
+        function redirect(which, input) {
+            //which: 0 = name
+            //which: 1 = id
+
+            //input: id or name from user
+            if(which == 0) {
+                input = input.replace(" ", "+")
+                input = input.replace("%20", "+")
+                window.location.replace("https://kahboom.tk/quizName/" + input);
+            } else if(which == 1) {
+                input = input.replace(" ", "")
+                window.location.replace("https://kahboom.tk/quizID/" + input);
+            }
+        }
+    </script>
 </head>
 <body>
         <div class="titleContainer">
             <p>Kahboom!</p>
-            <p>Choose an option to continue</p>
+            <p>Choose an option to continue:</p>
         </div>
 
         <div class="ButtonContainer">
-            <button id="searchNameBtn" class="btn red">Answers by searching Quiz</button>
+            <button id="searchNameBtn" class="btn red">Answers with Quiz Name</button>
             <button id="searchIDBtn" class="btn green">Answers with QuizID</button>
         </div>
 
         <div id="searchNameModal" class="modal">
             <div class="modal-content">
-                <form class="form">
-                    <input name="quizID" placeholder="Quiz Name" id="quizID-input" class="InputQuizID">
-                    <button type="submit" class="BtnQuizID">BOOM!</button>
+                <form class="form" autocomplete="off" method="post" action="">
+                    <input type="tel" placeholder="Quiz-Name" id="quizName-input" class="InputQuizName">
+                    <button type="submit" class="BtnQuizID" onclick="redirect(0, document.getElementById('quizName-input').value); return false;">BOOM!</button>
                 </form>
             </div>
         </div>
 
         <div id="searchIDModal" class="modal">
             <div class="modal-content">
-                <form class="form">
-                    <input name="quizID" placeholder="Quiz-ID" id="quizID-input" class="InputQuizID">
-                    <button type="submit" class="BtnQuizID">BOOM!</button>
+                <form class="form" autocomplete="off" method="post" action="">
+                    <input placeholder="Quiz-ID" id="quizID-input" class="InputQuizID">
+                    <button type="submit" class="BtnQuizID" onclick="redirect(1, document.getElementById('quizID-input').value); return false;">BOOM!</button>
                 </form>
             </div>
         </div>
