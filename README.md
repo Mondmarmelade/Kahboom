@@ -12,7 +12,7 @@ Methods:
 
 ## Help
 
-Any advise for common problems or issues, or join our discord: [Invite Me](https://dsc.gg/kahboom)
+Any advise for common problems or issues, or join our discord: [Invite Me](https://discord.gg/invite/nVuqgnWKN6)
 
 ## Authors
 
