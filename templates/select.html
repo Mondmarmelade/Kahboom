@@ -13,19 +13,10 @@
     <meta property="og:url" content="https://kahboom.tk">
     <meta property="og:image" content="../static/others/logo.png">
 
+    <script src="../static/javascript/select.js" defer></script>
     <title>Kahboom!</title>
-    <script>
-        function start() {
-            const btns = document.querySelectorAll('.btn');
-            for (const btn of btns) {
-                btn.addEventListener('click', function() {
-                    window.location.replace("https://kahboom.tk/quizID/" + btn.name);
-                });
-            }
-        }
-    </script>
 </head>
-<body onload="start();">
+<body>
 
     <div class="titleContainer">
         <p>Kahboom!</p>

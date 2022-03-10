@@ -15,23 +15,8 @@
     <meta property="og:image" content="../static/others/logo.png">
 
     <script src="../static/javascript/modal.js" defer></script>
+    <script src="../static/javascript/index.js" defer></script>
     <title>Kahboom!</title>
-    <script>
-        function redirect(which, input) {
-            //which: 0 = name
-            //which: 1 = id
-
-            //input: id or name from user
-            if(which == 0) {
-                input = input.replace(" ", "+")
-                input = input.replace("%20", "+")
-                window.location.replace("https://kahboom.tk/quizName/" + input);
-            } else if(which == 1) {
-                input = input.replace(" ", "")
-                window.location.replace("https://kahboom.tk/quizID/" + input);
-            }
-        }
-    </script>
 </head>
 <body>
         <div class="titleContainer">
