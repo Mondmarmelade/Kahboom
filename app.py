@@ -1,6 +1,5 @@
 #Here we import all resources
 import json
-from turtle import title
 import urllib.request as ur, json
 import urllib
 from waitress import serve
