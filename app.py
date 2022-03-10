@@ -17,7 +17,6 @@ def quizIDURL(ID):
     try:
         response = ur.urlopen("https://play.kahoot.it/rest/kahoots/" + ID)
         q = json.loads(response.read())["questions"]
-        name = json.loads(response.read())
 
         answers = []
 
