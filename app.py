@@ -34,7 +34,6 @@ def quizIDURL(ID):
                         Color = colors[i]
 
                         newAnswer = {
-                            "name": name["title"],
                             "number": number,
                             "answer": answer["choices"][i].get("answer"),
                             "color": Color,
