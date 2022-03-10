@@ -29,7 +29,7 @@
             <div class="select">
                 <div class="QuizIDContainer">
                     <p>QuizID:</p>
-                    <pre>{{s.id}}</pre>
+                    <pre class="pre" onclick="copyToClipboard('{{s.id}}')">{{s.id}}</pre>
                 </div>
                 <p>QuizName: {{s.name}}</p>
                 <p>Creator: {{s.creator}}</p>
