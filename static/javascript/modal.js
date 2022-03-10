@@ -5,11 +5,11 @@ const searchNameBtn = document.getElementById("searchNameBtn");
 const searchIDBtn = document.getElementById("searchIDBtn");
 
 searchNameBtn.onclick = function () {
-  searchNameModal.style.display = "block";
+  searchNameModal.style.display = "flex";
 };
 
 searchIDBtn.onclick = function () {
-  searchIDModal.style.display = "block";
+  searchIDModal.style.display = "flex";
 };
 
 window.onclick = function (event) {

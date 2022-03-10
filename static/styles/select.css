@@ -22,6 +22,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: auto;
+  height: 80px;
   min-width: 80%;
   margin: 10px;
   padding-inline: 20px;
