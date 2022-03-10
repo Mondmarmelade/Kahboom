@@ -1,5 +1,6 @@
 #Here we import all resources
 import json
+from turtle import title
 import urllib.request as ur, json
 import urllib
 from waitress import serve
@@ -17,6 +18,7 @@ def quizIDURL(ID):
     try:
         response = ur.urlopen("https://play.kahoot.it/rest/kahoots/" + ID)
         q = json.loads(response.read())["questions"]
+        name = json.loads(response.read())
 
         answers = []
 
@@ -33,6 +35,7 @@ def quizIDURL(ID):
                         Color = colors[i]
 
                         newAnswer = {
+                            "name": name["title"],
                             "number": number,
                             "answer": answer["choices"][i].get("answer"),
                             "color": Color,
@@ -49,7 +52,7 @@ def quizIDURL(ID):
 @app.route('/quizName/<Name>')
 def quizName(Name):
     try:
-        response = ur.urlopen("https://kahoot.it/rest/kahoots/?query=" + Name + "&limit=10")
+        response = ur.urlopen("https://kahoot.it/rest/kahoots/?query=" + Name + "&limit=50")
         q = json.loads(response.read())["entities"]
 
         selects = []
@@ -75,3 +78,5 @@ def quizName(Name):
 if __name__ == "__main__":
     #This runs the flask process
     serve(app, host='0.0.0.0', port=5000, url_scheme='https')
+    #Local for development
+    #app.run(host='0.0.0.0', port=5000, debug=True)
