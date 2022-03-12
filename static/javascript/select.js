@@ -9,4 +9,5 @@ for (const btn of btns) {
 
 function copyToClipboard(IDToCopy) {
   // ADD COPY CLIPBOARD FUNCTION
+  navigator.clipboard.writeText(IDToCopy);
 }
