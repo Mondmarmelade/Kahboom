@@ -3,9 +3,12 @@ import json
 import urllib.request as ur, json
 import urllib
 from waitress import serve
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template
+from flask_mobility import Mobility
+from flask_mobility.decorators import mobile_template
 
 app = Flask(__name__)
+Mobility(app)
 
 @app.route('/')
 def index():
@@ -47,7 +50,8 @@ def quizIDURL(ID):
         return "Check if the Quiz-ID is correct or try again later"
 
 @app.route('/quizName/<Name>')
-def quizName(Name):
+@mobile_template('{mobile/}select.html')
+def quizName(template ,Name):
     try:
         response = ur.urlopen("https://kahoot.it/rest/kahoots/?query=" + Name + "&limit=50")
         q = json.loads(response.read())["entities"]
@@ -65,12 +69,17 @@ def quizName(Name):
             selects.append(newSelect)
 
 
-        return render_template("select.html", selects=selects)
+        # return render_template("select.html", selects=selects)
+        return render_template(template, selects=selects)
         #Returns select.html
 
     except urllib.error.HTTPError as exception:
         #This returns an error if there is an HTTPError
         return "Check if the Quiz-Name has correct synatx or try again later"
+    
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=True)
 
 if __name__ == "__main__":
     #This runs the flask process

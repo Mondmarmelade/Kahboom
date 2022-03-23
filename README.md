@@ -7,8 +7,9 @@ from StandartCoder and Mondmarmelade! Programmed with Python, HTML, CSS and JS!
 
 Just go to https://kahboom.tk/, and select what method you wanna use!
 Methods:
- - Awnsers with QuizName
- - Awnsers with QuizID
+
+- Awnsers with QuizName
+- Awnsers with QuizID
 
 ## Help
 
@@ -18,9 +19,9 @@ Any advise for common problems or issues, or join our discord: [Invite Me](https
 
 Contributors names and contact info
 
-* Mondmarmelade | [@Mondmarmelade](https://github.com/Mondmarmelade)
+- Mondmarmelade | [@Mondmarmelade](https://github.com/Mondmarmelade)
 
-* StandartCoder | [@StandartCoder](https://github.com/StandartCoder)
+- StandartCoder | [@StandartCoder](https://github.com/StandartCoder)
 
 ## License
 
@@ -29,5 +30,7 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## Acknowledgments
 
 Modules used:
-* [Flask](https://palletsprojects.com/p/flask/)
-* [UrlLib](https://urllib3.readthedocs.io/en/stable/)
+
+- [Flask](https://palletsprojects.com/p/flask/)
+- [Flask-Mobility](https://flask-mobility.readthedocs.io/en/latest/)
+- [UrlLib](https://urllib3.readthedocs.io/en/stable/)

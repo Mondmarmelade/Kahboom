@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../static/others/favicon.ico">
+    <link rel="stylesheet" href="../static/styles/mobile/modal.css">
+    <link rel="stylesheet" href="../static/styles/mobile/select.css">
+
+    <meta property="og:type" content="site">
+    <meta property="og:title" content="Kahboom!">
+    <meta property="og:description" content="Enjoy the free and simple-to-use Kahoot cheat called Kahboom! Just click on the link and begin now to cheat in Kahoot!">
+    <meta property="og:url" content="https://kahboom.tk">
+    <meta property="og:image" content="../static/others/logo.png">
+
+    <script src="../static/javascript/modalMobile.js" defer></script>
+    <script src="../static/javascript/select.js" defer></script>
+    <title>Kahboom!</title>
+</head>
+<body>
+
+    <div class="titleContainer">
+        <p class="title">Kahboom!</p>
+        <p class="heading">Select the correct quiz:</p>
+        <p class="subheading">Click on them to see more details</p>
+    </div>
+
+    {% block content %}
+        {% for s in selects %}
+        <div class="selectContainer">
+                <div id="selectQuizBtn" class="select">
+                    <p>{{s.name}}</p>
+                </div> 
+        </div>
+    
+        <div id="selectQuizModal" class="modal">
+            <div class="modal-content">
+                <p class="modal-title">{{s.name}}</p>
+                <p class="modal-creator">Creator: {{s.creator}}</p>
+                <div class="QuizIDContainer">
+                    <p class="modal-id">QuizID:</p>
+                    <pre class="pre" onclick="copyToClipboard('{{s.id}}')">{{s.id}}</pre>
+                </div>
+                <button name="{{s.id}}" type="button" class="btn red">Select</button>
+            </div>
+        </div>
+        {% endfor %}
+    {% endblock %}
+
+</body>
+</html>
