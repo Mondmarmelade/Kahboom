@@ -16,7 +16,8 @@ def index():
     return render_template("index.html")
 
 @app.route('/quizID/<ID>')
-def quizIDURL(ID):
+@mobile_template('{mobile/}answers.html')
+def quizIDURL(template, ID):
     try:
         response = ur.urlopen("https://play.kahoot.it/rest/kahoots/" + ID)
         q = json.loads(response.read())["questions"]
@@ -42,7 +43,7 @@ def quizIDURL(ID):
                         }
                         answers.append(newAnswer)
 
-        return render_template("answers.html", answers=answers)
+        return render_template(template, answers=answers)
         #Returns awnsers.html
 
     except urllib.error.HTTPError as exception:
@@ -69,7 +70,6 @@ def quizName(template ,Name):
             selects.append(newSelect)
 
 
-        # return render_template("select.html", selects=selects)
         return render_template(template, selects=selects)
         #Returns select.html
 
