@@ -76,11 +76,7 @@ def quizName(template ,Name):
     except urllib.error.HTTPError as exception:
         #This returns an error if there is an HTTPError
         return "Check if the Quiz-Name has correct synatx or try again later"
-    
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
-
+        
 if __name__ == "__main__":
     #This runs the flask process
     serve(app, host='0.0.0.0', port=5000, url_scheme='https')
