@@ -4,8 +4,8 @@ function redirect(which, input) {
 
   //input: id or name from user
   if (which == 0) {
-    input = input.replace(" ", "+");
-    input = input.replace("%20", "+");
+    input = input.replaceAll(" ", "+");
+    input = input.replaceAll("%20", "+");
     window.open("https://kahboom.tk/quizName/" + input, "_self");
   } else if (which == 1) {
     input = input.replace(" ", "");
